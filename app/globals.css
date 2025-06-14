@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+#cart-count{
+  left: 65px;
+  top: -5px;
+}
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #bbb; 
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.dot.active {
+  background-color: #ff0000; /* red color */
+}
+
+.category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.img-container {
+  background: #FFFFFF;
+  box-shadow: #00000040 0 4px 4px 0;
+  width: 130px;
+  height: 130px;
+  overflow: hidden; /* Ensures images won't overflow the container */
+  transition: 0.3s;
+}
+
+.img-container img:not(:last-of-type) {
+  width: 100%;
+  height: auto;
+}
+
+.img-container:hover{
+  box-shadow: rgb(75, 75, 75) 0 0 4px 0;
+  transform: scale(1.1);
+}
+
+
+
+#red-btn:hover{
+  background: rgb(2,0,36);
+  box-shadow: #b85353 0 0 8px 0px;
+  background: linear-gradient(90deg, rgb(255, 35, 35) 0%, rgb(115, 6, 12) 100%);
+  }
+
+
+.ad-container {
+  position: relative;
+  /* Other styles for your container */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0); /* Initially transparent */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.ad-container:hover .overlay {
+  background-color: rgba(221, 218, 218, 0.092); /* White overlay with opacity */
+}
+
+
+.full-width-image {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.full-width-image h1{
+  line-height: 2;
+  min-height: 20rem;
+}
+
+.overlay-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 0, 0, 0.733), rgba(255, 255, 255, 0.319));
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+  z-index: 1; /* Ensure it's above the image */
+}
+
+.banner-btn{
+  background-color: rgba(255, 255, 255, 0.599);
+  position: absolute;
+  z-index: 20;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+
+.banner-btn:hover{
+  background-color: rgba(255, 255, 255, 0.774);
+
+}
+
+.subscribe-banner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ff0000;
+}
+
+
+.subscribe-btn{
+  transition: .3s;
+  
+}
+
+.subscribe-btn:hover{
+  box-shadow: #8a6464 0 0 10px 0;
+}
+
+
+#payment-p{
+  line-height: 2;
+}
+
+
+@media screen and (max-width: 1090px) {
+  .desktop-nav{
+    font-size: 11px;
+    gap: 2;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .desktop-nav{
+    font-size: xx-small;
+    gap: 4;
+  }
+}
+
+@media screen and (max-width: 700px){
+  #mobiles-dropdown{
+    display: none;
+  }
+}
+
+
+
+#mobiles-dropdown.fade-in-slide-down {
+  animation: fadeInSlideDown 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeInSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about .col p{
+  line-height: 2;
+}
+
+#profile-pic{
+  height: 6rem;
+}
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.radio-custom .ant-radio-input {
+  opacity: 0;
+}
+
+.radio-custom .ant-radio-inner {
+  display: none;
+}
+
+
+
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination a {
+  font-weight: bold;
+  padding: 2px 10px; /* Padding for each pagination link */
+  color: red;
+  background-color: #9F9F9F40;
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners for each pagination link */
+}
+
+.pagination .active a {
+  background-color: red;
+  color: white;
+}
+
+
+.ant-steps .ant-steps-item-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ant-steps-item-content{
+  text-align: right;
+}
+
+.ant-steps-item-content>.ant-steps-item-description {
+  text-align: right;
+  direction: rtl;
+  
+}
+
+.ant-steps.ant-steps-vertical >.ant-steps-item .ant-steps-item-content{
+    text-align: right;
+}
+
+.ant-steps-item-content>.ant-steps-item-title {
+  padding: 0;
+  font-weight: bold;
+}
+
+.custom-steps .ant-steps-item.ant-steps-item-process .ant-steps-item-icon {
+  background-color: red; /* Set background color for active step */
+  border-color: red;
+}
+
+.custom-steps .ant-steps-item.ant-steps-item-process .ant-steps-item-icon {
+  color: white; /* Set text color for active step */
+  font-weight: bold;
+}
+
+.ant-steps .ant-steps-item-wait .ant-steps-item-icon >.ant-steps-icon{
+  color: red;
+}
+
+
+.ant-steps .ant-steps-item-finish .ant-steps-item-icon >.ant-steps-icon{
+  background-color: #F0F0F0;
+  color: red;
+}
+
+.ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-tail::after{
+  background-color: red;
+}
+
+.ant-steps .ant-steps-item-finish .ant-steps-item-icon{
+  background-color: #F0F0F0;
+  border-color: #F0F0F0;
+}
+
+.ant-steps .ant-steps-item-process>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title {
+  color: green; /* Set text color for all steps */
+}
+
+.ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title{
+  color: red;
+}
+
+.ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-description{
+  color: #777;
+}
+
+
+.ant-tabs >.ant-tabs-nav .ant-tabs-nav-list {
+  gap: 20px;
+}
+
+
+
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+  color: red;
+}
+
+
+.ant-tabs .ant-tabs-ink-bar{
+  background-color: red;
+}
+
+.ant-tabs {
+  padding: 10px;
+  gap: 10px;
+}
+
+.ant-tabs .ant-tabs-tab-btn{
+  font-weight: 600;
+}
+
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+  font-weight: 800;
+}
+
+.ant-tabs .ant-tabs-tab.ant-tabs-tab .ant-tabs-tab-btn:hover{
+  color: black;
+}
+
+
+
+.banner-container {
+  position: relative;
+  height: 500px; /* Set the desired height */
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.banner-container img {
+  width: 100%; /* Ensure the image fills the container width */
+  height: 100%; /* Ensure the image fills the container height */
+  object-fit: cover; /* Crop and zoom the image */
+  object-position: center; /* Center the image */
+}
+
+.overlay {
+  position: absolute; /* Position the overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.product-desc p {
+  line-height: 1.8;
+}
+
+/* #TAPS{
+  margin: 0 auto
+} */
+
+.main-product img:hover{
+  transform: scale(1.2);
+}
+
+
+
+.lds-dual-ring {
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid red;
+  border-color: #fff red #fff red;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
