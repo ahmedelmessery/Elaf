@@ -1,4 +1,5 @@
 'use client'
+import '../util/localStoragePolyfill'
 import { UserProvider } from '@/Context/userContext'
 import './globals.css'
 import '@fortawesome/fontawesome-free/css/all.css'
