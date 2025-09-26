@@ -11,7 +11,6 @@ import SubscribeBanner from '@/components/SubscribeBanner'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import React, { useContext, useEffect, useState } from 'react'
-import { Offline } from 'react-detect-offline'
 import { cartContext } from '@/Context/cartContext'
 
 const Home = () => {
@@ -39,11 +38,6 @@ const Home = () => {
         <title>ＥＬＡＦ</title>
 
       
-      <div className=' text-red font-semibold w-fit rounded-3xl p-2 bottom-0 right-0 fixed z-50 animate-bounce'>
-      <Offline>
-        <div>You're offline right now. Check your connection.</div>
-      </Offline>
-      </div>
       
       
 
