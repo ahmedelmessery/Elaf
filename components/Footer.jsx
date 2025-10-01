@@ -41,7 +41,7 @@ const Footer = () => {
                 <Image src='/logo.png' width={100} height={100} alt="elaf" />
             </div>
         </div>
-        <p dir='rtl' className='font-bold text-center p-4 text-sm text-gray-700'>© 2023 ايلاف. كل الحقوق محفوظة</p>
+        <p dir='rtl' className='font-bold text-center p-4 text-sm text-gray-700'>© 2025 ايلاف. كل الحقوق محفوظة</p>
     </footer>
   )
 }
